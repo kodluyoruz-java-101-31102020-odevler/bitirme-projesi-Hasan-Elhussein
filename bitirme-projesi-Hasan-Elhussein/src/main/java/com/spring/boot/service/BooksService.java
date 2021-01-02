@@ -4,6 +4,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.spring.boot.annotation.RuntimeAspect;
 import com.spring.boot.dao.entity.Books;
 import com.spring.boot.dao.jpa.repository.BooksRepository;
 import com.spring.boot.service.model.BooksContext;
@@ -11,28 +13,33 @@ import com.spring.boot.service.model.BooksContext;
 @Service
 public class BooksService implements IBooksService{
 	
+	
 	@Autowired
 	private BooksRepository booksRepository;
 	
+	@RuntimeAspect(active = true)
 	public Books findWithBook_id(Long id) {
 		return booksRepository.findWithBook_id(id);
 	}
 	
+	@RuntimeAspect(active = true)
 	public List<Books> getAllBooksList() {
 		return booksRepository.getAllBooksList();
 	}
-
+	
+	@RuntimeAspect(active = true)
 	public List<Books> searchBooksList(BooksContext booksContext) {
 		if(booksContext.getKeyWord() != null) return booksRepository.searchBooksList(booksContext.getKeyWord());	
 		 return booksRepository.getAllBooksList(); 	
 	}
 	
+	@RuntimeAspect(active = true)
 	@Transactional
 	public Long save(BooksContext booksContext) {
 		
 		Long maxId = 1L;
 		
-		//Books booksCheck = booksRepository.findWithBook_id(booksContext.getId());
+		//check if the list is empty
 		if(booksRepository.findWithBook_id(1L) != null)
 			maxId = booksRepository.findMaxId() + 1;
 		
@@ -49,6 +56,7 @@ public class BooksService implements IBooksService{
 		return books.getBook_id();
 	}
 	
+	@RuntimeAspect(active = true)
 	@Transactional
 	public Long update(BooksContext booksContext) {
 		
@@ -66,6 +74,7 @@ public class BooksService implements IBooksService{
 		return books.getBook_id();
 	}
 	
+	@RuntimeAspect(active = true)
 	@Transactional
 	public Long delete(Long id) {
 		booksRepository.deleteAll();
