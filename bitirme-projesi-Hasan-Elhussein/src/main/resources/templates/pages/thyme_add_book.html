@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Add a new book</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/shards.min.css">
+    </head>
+    <body>
+ <div class="container my-5">
+            <h2 class="mb-5">Add a new book</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <form action="#" th:action="@{add_book}" th:object="${booksContext}" method="POST">
+                        
+                            <div class="form-group">
+                                <label for="book_name" class="col-form-label">Book name: </label>
+                                <input type="text" th:field="*{book_name}" class="form-control" id="book_name" placeholder="Enter book's name">
+                            </div>
+                            <div class="form-group">
+                                <label for="author_id" class="col-form-label">Book's author id number: </label>
+                                <input type="number" th:field="*{author_id}" class="form-control" id="author_id" placeholder="Select an author">
+                            </div>
+                        
+                            <div class="form-group">
+                            	<label for="book_description" class="col-form-label">Description: </label>
+                                <input type="text" th:field="*{book_description}" class="form-control" id="book_description" placeholder="Enter book's description">
+                            </div>
+                              <div class="form-group">
+                                <label for="book_note" class="col-form-label">Note: </label>
+                                <input type="text" th:field="*{book_note}" class="form-control" id="book_note" placeholder="Add a note">
+                            </div>
+                        
+                        
+                         <div class="form-group">
+                                <label for=book_publication_date class="col-form-label">Publication Date</label>
+								<input type="date" th:field="*{book_publication_date}" id="book_publication_date" placeholder="Enter book's publication date"/>
+                            </div>
+    
+                        <div class="row">
+                            <div class="mt-5">
+                                <input type="submit" class="btn btn-primary" value="Add">
+                                <a href="books" class="btn btn-primary">Back</a>
+                            </div>
+						</div>
+                          
+					</form>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>

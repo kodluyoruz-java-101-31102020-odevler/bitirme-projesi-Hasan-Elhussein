@@ -15,13 +15,13 @@ public class Books {
 	
 	@Id
 	@Column(name = "book_id")
-	private int book_id;
+	private long book_id;
 	
 	@Column(name = "book_name")
 	private String book_name;
 	
 	@Column(name = "author_id")
-	private int author_id;
+	private long author_id;
 	
 	@Column(name = "book_description")
 	private String book_description;
@@ -36,15 +36,15 @@ public class Books {
 	private String book_publication_date;
 	
 	@OneToMany(mappedBy = "books", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private List<Authors> authors;
+	private List<Authors> authorsList;
 	
 	
 	//*** Setters and Getters ***
-	public int getBook_id() {
+	public long getBook_id() {
 		return book_id;
 	}
 
-	public void setBook_id(int book_id) {
+	public void setBook_id(long book_id) {
 		this.book_id = book_id;
 	}
 
@@ -56,11 +56,11 @@ public class Books {
 		this.book_name = book_name;
 	}
 
-	public int getAuthor_id() {
+	public long getAuthor_id() {
 		return author_id;
 	}
 
-	public void setAuthor_id(int author_id) {
+	public void setAuthor_id(long author_id) {
 		this.author_id = author_id;
 	}
 
@@ -96,12 +96,12 @@ public class Books {
 		this.book_publication_date = book_publication_date;
 	}
 
-	public List<Authors> getAuthors() {
-		return authors;
+	public List<Authors> getAuthorsList() {
+		return authorsList;
 	}
 
-	public void setAuthors(List<Authors> authors) {
-		this.authors = authors;
+	public void setAuthorsList(List<Authors> authors) {
+		this.authorsList = authors;
 	}
 	//***************************
 	
