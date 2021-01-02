@@ -20,8 +20,8 @@ public class Books {
 	@Column(name = "book_name")
 	private String book_name;
 	
-	@Column(name = "author_id")
-	private long author_id;
+	@Column(name = "author_name")
+	private String author_name;
 	
 	@Column(name = "book_description")
 	private String book_description;
@@ -35,8 +35,8 @@ public class Books {
 	@Column(name = "book_publication_date")
 	private String book_publication_date;
 	
-	@OneToMany(mappedBy = "books", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private List<Authors> authorsList;
+	//@OneToMany(mappedBy = "books", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	//private List<Authors> authorsList;
 	
 	
 	//*** Setters and Getters ***
@@ -56,12 +56,12 @@ public class Books {
 		this.book_name = book_name;
 	}
 
-	public long getAuthor_id() {
-		return author_id;
+	public String getAuthor_name() {
+		return author_name;
 	}
 
-	public void setAuthor_id(long author_id) {
-		this.author_id = author_id;
+	public void setAuthor_name(String author_name) {
+		this.author_name = author_name;
 	}
 
 	public String getBook_description() {
@@ -96,6 +96,7 @@ public class Books {
 		this.book_publication_date = book_publication_date;
 	}
 
+	/*
 	public List<Authors> getAuthorsList() {
 		return authorsList;
 	}
@@ -104,7 +105,7 @@ public class Books {
 		this.authorsList = authors;
 	}
 	//***************************
-	
+	*/
 }
 
 

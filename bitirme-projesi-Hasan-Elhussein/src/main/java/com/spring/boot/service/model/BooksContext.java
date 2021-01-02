@@ -6,7 +6,7 @@ public class BooksContext {
 	
 	private long id;
 	private String book_name;
-	private long author_id;
+	private String author_name;
 	private String book_description;
 	private String book_note;
 	private int book_page_count;
@@ -31,11 +31,11 @@ public class BooksContext {
 	public void setBook_name(String book_name) {
 		this.book_name = book_name;
 	}
-	public long getAuthor_id() {
-		return author_id;
+	public String getAuthor_name() {
+		return author_name;
 	}
-	public void setAuthor_id(long author_id) {
-		this.author_id = author_id;
+	public void setAuthor_name(String author_name) {
+		this.author_name = author_name;
 	}
 	public String getBook_description() {
 		return book_description;

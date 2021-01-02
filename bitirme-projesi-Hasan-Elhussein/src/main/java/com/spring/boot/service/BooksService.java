@@ -34,7 +34,7 @@ public class BooksService implements IBooksService{
 		Books books= new Books();
 		books.setBook_id(maxId);
 		books.setBook_name(booksContext.getBook_name());
-		books.setAuthor_id(booksContext.getAuthor_id());
+		books.setAuthor_name(booksContext.getAuthor_name());
 		books.setBook_publication_date(booksContext.getBook_publication_date());
 		books.setBook_description(booksContext.getBook_description());
 		books.setBook_note(booksContext.getBook_note());
@@ -52,6 +52,7 @@ public class BooksService implements IBooksService{
 			throw new RuntimeException(booksContext.getId() + " ID not found in DB!");
 		
 		books.setBook_name(booksContext.getBook_name());
+		books.setAuthor_name(booksContext.getAuthor_name());
 		books.setBook_publication_date(booksContext.getBook_publication_date());
 		books.setBook_description(booksContext.getBook_description());
 		books.setBook_note(booksContext.getBook_note());

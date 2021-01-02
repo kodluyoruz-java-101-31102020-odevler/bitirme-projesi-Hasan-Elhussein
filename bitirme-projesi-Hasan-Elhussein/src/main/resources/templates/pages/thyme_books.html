@@ -37,7 +37,7 @@
                             <thead>
                                 <tr>
                                     <th>Book name</th>
-                                    <th>Author id</th>
+                                    <th>Author name</th>
                                     <th>Publication date</th>
                                     <th>Pages count</th>
                                     <th>Description</th> 
@@ -47,7 +47,7 @@
                             <tbody>
                                 <tr th:each="books : ${books}">	
                                     <td th:text="${books.book_name}"></td>
-                                    <td th:text="${books.author_id}"></td>
+                                    <td th:text="${books.author_name}"></td>
                                     <td th:text="${books.book_publication_date}"></td>
                                     <td th:text="${books.book_page_count}"></td>
                                     <td th:text="${books.book_description}"></td> 
