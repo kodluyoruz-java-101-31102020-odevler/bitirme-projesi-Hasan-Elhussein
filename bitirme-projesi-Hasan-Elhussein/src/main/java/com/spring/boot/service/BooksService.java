@@ -30,7 +30,12 @@ public class BooksService implements IBooksService{
 	@Transactional
 	public Long save(BooksContext booksContext) {
 		
-		Long maxId = booksRepository.findMaxId() + 1;
+		Long maxId = 1L;
+		
+		//Books booksCheck = booksRepository.findWithBook_id(booksContext.getId());
+		if(booksRepository.findWithBook_id(1L) != null)
+			maxId = booksRepository.findMaxId() + 1;
+		
 		Books books= new Books();
 		books.setBook_id(maxId);
 		books.setBook_name(booksContext.getBook_name());

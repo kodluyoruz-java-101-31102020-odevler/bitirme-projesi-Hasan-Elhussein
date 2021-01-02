@@ -1,12 +1,8 @@
 package com.spring.boot.dao.entity;
 
-import java.util.List;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -34,9 +30,6 @@ public class Books {
 	
 	@Column(name = "book_publication_date")
 	private String book_publication_date;
-	
-	//@OneToMany(mappedBy = "books", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	//private List<Authors> authorsList;
 	
 	
 	//*** Setters and Getters ***
@@ -95,17 +88,7 @@ public class Books {
 	public void setBook_publication_date(String book_publication_date) {
 		this.book_publication_date = book_publication_date;
 	}
-
-	/*
-	public List<Authors> getAuthorsList() {
-		return authorsList;
-	}
-
-	public void setAuthorsList(List<Authors> authors) {
-		this.authorsList = authors;
-	}
-	//***************************
-	*/
+	
 }
 
 

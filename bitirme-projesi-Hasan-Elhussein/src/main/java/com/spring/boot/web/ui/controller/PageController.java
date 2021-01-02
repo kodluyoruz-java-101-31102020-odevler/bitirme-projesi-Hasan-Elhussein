@@ -40,6 +40,13 @@ public class PageController {
         return "pages/thyme_books";
 	}
 	
+	//deleting all the records!
+		@RequestMapping(value = "/delete", method = RequestMethod.GET)
+		public String delete(BooksContext booksContext) {
+			booksService.delete(booksContext.getId());
+			return "pages/thyme_books";
+		}
+	
 		
 		
 }
