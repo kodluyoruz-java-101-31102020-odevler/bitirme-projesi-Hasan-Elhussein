@@ -36,8 +36,15 @@ public class PageController {
     public String addBook(BooksContext booksContext, BindingResult result, Model model) {
 		booksService.save(booksContext);
 		model.addAttribute("books", booksService.getAllBooksList());
-        return "pages/thyme_book";
+        return "pages/thyme_books";
 	}
+	
+	
+	@RequestMapping(value = "/add_author", method = RequestMethod.GET)
+	public String addAuthor(AuthorsContext authorsContext) {
+		return "pages/thyme_add_author";
+	}
+	
 	
 	
 }

@@ -24,6 +24,11 @@
                                 <label for="author_id" class="col-form-label">Book's author id number: </label>
                                 <input type="number" th:field="*{author_id}" class="form-control" id="author_id" placeholder="Select an author">
                             </div>
+                            
+                            <div class="form-group">
+                                <label for="book_page_count" class="col-form-label">Book's page count: </label>
+                                <input type="number" th:field="*{book_page_count}" class="form-control" id="book_page_count" placeholder="Enter book's page count">
+                            </div>
                         
                             <div class="form-group">
                             	<label for="book_description" class="col-form-label">Description: </label>
@@ -33,7 +38,6 @@
                                 <label for="book_note" class="col-form-label">Note: </label>
                                 <input type="text" th:field="*{book_note}" class="form-control" id="book_note" placeholder="Add a note">
                             </div>
-                        
                         
                          <div class="form-group">
                                 <label for=book_publication_date class="col-form-label">Publication Date</label>

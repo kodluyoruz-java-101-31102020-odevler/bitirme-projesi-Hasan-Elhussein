@@ -34,11 +34,11 @@ public class BooksService implements IBooksService{
 		Books books= new Books();
 		books.setBook_id(maxId);
 		books.setBook_name(booksContext.getBook_name());
-		//books.setAuthorName(booksContext.getAuthorName());
 		books.setAuthor_id(booksContext.getAuthor_id());
 		books.setBook_publication_date(booksContext.getBook_publication_date());
 		books.setBook_description(booksContext.getBook_description());
 		books.setBook_note(booksContext.getBook_note());
+		books.setBook_page_count(booksContext.getBook_page_count());
 		books = booksRepository.save(books);
 		
 		return books.getBook_id();
@@ -55,6 +55,7 @@ public class BooksService implements IBooksService{
 		books.setBook_publication_date(booksContext.getBook_publication_date());
 		books.setBook_description(booksContext.getBook_description());
 		books.setBook_note(booksContext.getBook_note());
+		books.setBook_page_count(booksContext.getBook_page_count());
 		booksRepository.save(books);
 		return books.getBook_id();
 	}
