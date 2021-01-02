@@ -55,13 +55,14 @@ public class BooksService implements IBooksService{
 		return books.getBook_id();
 	}
 	
+	/*
 	@RuntimeAspect(active = true)
 	@Transactional
 	public Long update(BooksContext booksContext) {
 		
 		Books books = booksRepository.findWithBook_id(booksContext.getId());
 		if(books == null)
-			throw new RuntimeException(booksContext.getId() + " ID not found in DB!");
+			throw new RuntimeException(booksContext.getId() + " ID not found in DB");
 		
 		books.setBook_name(booksContext.getBook_name());
 		books.setAuthor_name(booksContext.getAuthor_name());
@@ -72,6 +73,7 @@ public class BooksService implements IBooksService{
 		booksRepository.save(books);
 		return books.getBook_id();
 	}
+	*/
 	
 	@RuntimeAspect(active = true)
 	@Transactional

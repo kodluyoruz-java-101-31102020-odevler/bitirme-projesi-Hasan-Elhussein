@@ -15,8 +15,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.spring.boot.dao.entity.Books;
 import com.spring.boot.dao.jpa.repository.BooksRepository;
 
-
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @TestPropertySource({ "classpath:application.properties" })
@@ -39,7 +37,7 @@ class BooksRepositoryIT {
 	@Test
 	@Transactional
 	@Rollback(true)
-	@Order(3)
+	@Order(2)
 	public void saveBooks() {
 		
 		Long testMaxId = 1L;

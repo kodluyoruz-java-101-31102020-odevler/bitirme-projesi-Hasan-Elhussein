@@ -10,7 +10,7 @@ public interface IBooksService {
 	public List<Books> searchBooksList(BooksContext booksContext);
 	public List<Books> getAllBooksList();
 	public Long save(BooksContext booksContext);
-	public Long update(BooksContext booksContext);
+	//public Long update(BooksContext booksContext);
 	public Long delete(Long id);
 	
 }
