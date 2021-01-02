@@ -1,10 +1,6 @@
 package com.spring.boot.service.model;
 
-//import java.io.Serializable;
-
-public class BooksContext  /*implements Serializable*/ {
-
-	//private static final long serialVersionUID = 3906169278470348749L;
+public class BooksContext {
 	
 	private String keyWord;
 	

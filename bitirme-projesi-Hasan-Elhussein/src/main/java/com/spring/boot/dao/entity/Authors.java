@@ -14,7 +14,7 @@ public class Authors {
 	
 	@Id
 	@Column(name = "author_id")
-	private int author_id;
+	private long author_id;
 	
 	@Column(name = "author_name")
 	private String author_name;
@@ -25,11 +25,11 @@ public class Authors {
 	
 	
 	//*** Setters and Getters ***
-	public int getAuthor_id() {
+	public long getAuthor_id() {
 		return author_id;
 	}
 
-	public void setAuthor_id(int author_id) {
+	public void setAuthor_id(long author_id) {
 		this.author_id = author_id;
 	}
 

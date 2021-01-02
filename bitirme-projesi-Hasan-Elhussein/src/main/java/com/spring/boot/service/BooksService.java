@@ -14,7 +14,7 @@ public class BooksService implements IBooksService{
 	@Autowired
 	private BooksRepository booksRepository;
 	
-	public Books findWithId(Long id) {
+	public Books findWithBook_id(Long id) {
 		return booksRepository.findWithBook_id(id);
 	}
 	

@@ -24,7 +24,6 @@
 		    					<form method="GET" th:action="@{books}" th:object="${booksContext}">
 		   						<input type="text" name="keyWord" th:value="${param.keyWord}" size="20" height="10" placeholder="search for a book name!"/>
 		    					<input type="submit" value="Search" class="btn btn-primary"/>
-		    					<a href="authors" class="btn btn-info">View authors list</a>
 		    					</form>
 		    					
 					<h1>
@@ -59,7 +58,6 @@
                     </div>      
                     <p class="my-5">
                     	<a href="add_book" class="btn btn-primary">add a new book<i class="fa fa-plus ml-2"></i></a>
-                    	<a href="add_author" class="btn btn-primary">add a new author<i class="fa fa-plus ml-2"></i></a>
                     </p>
                 </div>
             </div>
